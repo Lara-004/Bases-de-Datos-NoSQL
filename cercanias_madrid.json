@@ -1,0 +1,1072 @@
+{
+  "modelName": "Cercanias_Madrid",
+  "collections": [
+    {
+      "collectionName": "paradas_por_linea_dia",
+      "type": "object",
+      "properties": [
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "9567526c-8338-4c3d-ac82-7f57cca57fcc",
+          "name": "linea",
+          "error": {},
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "fecha_servicio",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "c81d6241-20d9-400c-a3ff-b2442d4ebe12",
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "hora_prevista",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "53919b76-48af-4a4e-acfc-fadc825999c9",
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "b5143c16-2354-40e3-90c8-799e8057f626",
+          "name": "tren",
+          "error": {},
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "bd6fef60-2fd5-4f9a-bff2-0e344ad2a88b",
+          "name": "estacion",
+          "error": {},
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "destino",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "a37ecdae-b409-464b-b4a5-ada7bc055d19",
+          "error": {}
+        },
+        {
+          "name": "hora_calculada",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "f631ef5f-2590-472f-bb6d-a7d4820f0b99"
+        },
+        {
+          "name": "origen",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "16a5652d-217f-4a6a-835f-ddcb473d7747",
+          "error": {}
+        },
+        {
+          "name": "retraso_min",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "100e2cc8-8289-49e2-8621-66c51b837db0"
+        },
+        {
+          "name": "sentido",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "13549876-0a7a-42df-8d0f-4fb7253fd9b8"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "2aaef51b-d194-4036-8f6e-25a86248010b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "tableIfNotExist": false,
+      "searchIndexIfNotExist": false,
+      "GUID": "05283064-3755-45bd-a859-6b138dc524e6",
+      "bucketId": "c1baa947-090c-46a9-afb7-4d0413dba8ef",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "compositePartitionKey": [
+        {
+          "keyId": "9567526c-8338-4c3d-ac82-7f57cca57fcc"
+        },
+        {
+          "keyId": "c81d6241-20d9-400c-a3ff-b2442d4ebe12"
+        }
+      ],
+      "compositeClusteringKey": [
+        {
+          "keyId": "53919b76-48af-4a4e-acfc-fadc825999c9",
+          "type": "ascending"
+        },
+        {
+          "keyId": "b5143c16-2354-40e3-90c8-799e8057f626",
+          "type": "ascending"
+        },
+        {
+          "keyId": "bd6fef60-2fd5-4f9a-bff2-0e344ad2a88b",
+          "type": "ascending"
+        }
+      ],
+      "autoHeight": true,
+      "autoWidth": true,
+      "fontStyle": [
+        "bold"
+      ],
+      "color": {},
+      "width": 265,
+      "height": 212
+    },
+    {
+      "collectionName": "recorrido_por_tren_dia",
+      "type": "object",
+      "properties": [
+        {
+          "name": "tren",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "f262ee2d-7a72-4f5e-8015-0f6ddb6148d3",
+          "error": {},
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "fecha_servicio",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "5fe06526-60e9-4e5c-a84f-65f2cc839eeb",
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "hora_prevista",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "bfbf5124-548d-42ba-9191-65ae18c03236",
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "estacion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "78cfeeb6-5cd1-469c-8eaf-e05cd6e76f52",
+          "error": {},
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "destino",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "a90426b5-1180-4b53-9ec7-727906534f9f",
+          "error": {}
+        },
+        {
+          "name": "hora_calculada",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "2bdf7e2f-52e2-42f1-b18e-1d15173048f2"
+        },
+        {
+          "name": "linea",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "3e6dc2b0-1141-4216-8076-cff93ef20557",
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "02658d59-245c-4304-8a92-09ea2699cb41",
+          "name": "origen",
+          "error": {}
+        },
+        {
+          "name": "retraso_min",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "64d5e0e7-fd30-4906-85aa-84b987f19577"
+        },
+        {
+          "name": "sentido",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "4d6d4451-0e4d-4d08-a230-6ff344c6782d"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "50346314-6eec-4953-8154-db07f9d0b421"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "tableIfNotExist": false,
+      "searchIndexIfNotExist": false,
+      "GUID": "7c30df15-e90b-418c-9a25-a4ead40a67e2",
+      "bucketId": "c1baa947-090c-46a9-afb7-4d0413dba8ef",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "compositePartitionKey": [
+        {
+          "keyId": "f262ee2d-7a72-4f5e-8015-0f6ddb6148d3"
+        },
+        {
+          "keyId": "5fe06526-60e9-4e5c-a84f-65f2cc839eeb"
+        }
+      ],
+      "compositeClusteringKey": [
+        {
+          "keyId": "bfbf5124-548d-42ba-9191-65ae18c03236",
+          "type": "ascending"
+        },
+        {
+          "keyId": "78cfeeb6-5cd1-469c-8eaf-e05cd6e76f52",
+          "type": "ascending"
+        }
+      ]
+    },
+    {
+      "collectionName": "retrasos_por_linea_dia",
+      "type": "object",
+      "properties": [
+        {
+          "name": "linea",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "b649847c-0cef-4cf4-8e8b-9f5f38f14c45",
+          "error": {},
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "fecha_servicio",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "b375ce73-3c44-4547-ab37-c77c2d7b22c7",
+          "compositePartitionKey": true,
+          "required": true
+        },
+        {
+          "name": "retraso_min",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": true,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "7a8bf365-3506-47ad-9ab9-ad22319f2790",
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "tren",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "df9815f6-7801-42f5-a541-039d4f7dc334",
+          "error": {
+            "name": false,
+            "code": false
+          },
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "estacion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "b8684994-d58c-469d-8af8-9bd72f52731a",
+          "error": {},
+          "compositeClusteringKey": true,
+          "required": true
+        },
+        {
+          "name": "destino",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "352c0bf4-4fa2-4584-b300-98618b53500e",
+          "error": {
+            "name": false,
+            "code": false
+          }
+        },
+        {
+          "name": "hora_calculada",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "d35dc04e-b4e9-40d0-b1c0-d2fb91ff5347"
+        },
+        {
+          "name": "hora_prevista",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "66d97f9d-bd6e-4cc9-be17-79dfde7b1a89"
+        },
+        {
+          "name": "origen",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "97f82e77-7f54-4c13-afb8-424fe5f1cff4",
+          "error": {}
+        },
+        {
+          "name": "sentido",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "a78b0d2a-8c12-403b-a8e6-b9bb43ed66b0"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "da4320fe-2b05-4b5b-92e6-488e3ac96de5"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "tableIfNotExist": false,
+      "searchIndexIfNotExist": false,
+      "GUID": "c764899a-a3ba-4e72-83b7-dee3a5469433",
+      "bucketId": "c1baa947-090c-46a9-afb7-4d0413dba8ef",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "compositePartitionKey": [
+        {
+          "keyId": "b649847c-0cef-4cf4-8e8b-9f5f38f14c45"
+        },
+        {
+          "keyId": "b375ce73-3c44-4547-ab37-c77c2d7b22c7"
+        }
+      ],
+      "compositeClusteringKey": [
+        {
+          "keyId": "7a8bf365-3506-47ad-9ab9-ad22319f2790",
+          "type": "descending"
+        },
+        {
+          "keyId": "df9815f6-7801-42f5-a541-039d4f7dc334",
+          "type": "ascending"
+        },
+        {
+          "keyId": "b8684994-d58c-469d-8af8-9bd72f52731a",
+          "type": "ascending"
+        }
+      ],
+      "autoHeight": true,
+      "autoWidth": true,
+      "fontStyle": [
+        "bold"
+      ],
+      "color": {},
+      "width": 266,
+      "height": 212
+    },
+    {
+      "collectionName": "retrasos_por_estacion",
+      "type": "object",
+      "properties": [
+        {
+          "name": "estacion",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "0c8651d2-8536-4031-9abc-388419e300c1",
+          "error": {},
+          "required": true,
+          "compositePartitionKey": true
+        },
+        {
+          "name": "fecha_servicio",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "date",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "6ec3638e-7ea2-4dc1-b1ba-f60c79b22e0a",
+          "required": true,
+          "compositeClusteringKey": true
+        },
+        {
+          "name": "hora_prevista",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "error": {},
+          "GUID": "43b49d3e-6ce1-4c62-a983-6d7131b29de9",
+          "required": true,
+          "compositeClusteringKey": true
+        },
+        {
+          "name": "tren",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": true,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "70387645-7f95-47fc-af3e-3b2553a3e58a",
+          "error": {},
+          "required": true,
+          "compositeClusteringKey": true
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "ea360ef5-3d60-4677-af7b-26d78ee89966",
+          "name": "destino",
+          "error": {}
+        },
+        {
+          "name": "hora_calculada",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "childType": "time",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "7fffb5a7-dadc-4862-b2e9-6493977016b7"
+        },
+        {
+          "name": "linea",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "4e80b85d-5ba1-44ec-82c7-c672b57608b0",
+          "error": {}
+        },
+        {
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "primaryKey": false,
+          "mode": "text",
+          "subtype": "string",
+          "childType": "char",
+          "type": "string",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "GUID": "fa14c17a-952a-4609-8b2b-9af96b38e7bd",
+          "name": "origen",
+          "error": {}
+        },
+        {
+          "name": "retraso_min",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "d799bea5-3522-415b-b6b1-81e90f694c4b"
+        },
+        {
+          "name": "sentido",
+          "hackoladeMeta": {},
+          "isActivated": true,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "primaryKey": false,
+          "mode": "integer",
+          "childType": "numeric",
+          "type": "numeric",
+          "compositeKey": [
+            "compositePartitionKey",
+            "compositeClusteringKey"
+          ],
+          "compositePartitionKey": false,
+          "compositeClusteringKey": false,
+          "error": {},
+          "GUID": "191a1fee-3c0e-4401-96a1-dcd024cbb87b"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d4809a7b-13fa-45c0-b1d9-2627558c4955"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "tableIfNotExist": false,
+      "searchIndexIfNotExist": false,
+      "GUID": "27ffc533-499c-4ef5-9756-7f0027b99be9",
+      "bucketId": "c1baa947-090c-46a9-afb7-4d0413dba8ef",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "compositePartitionKey": [
+        {
+          "keyId": "0c8651d2-8536-4031-9abc-388419e300c1"
+        }
+      ],
+      "compositeClusteringKey": [
+        {
+          "keyId": "6ec3638e-7ea2-4dc1-b1ba-f60c79b22e0a",
+          "type": "ascending"
+        },
+        {
+          "keyId": "43b49d3e-6ce1-4c62-a983-6d7131b29de9",
+          "type": "ascending"
+        },
+        {
+          "keyId": "70387645-7f95-47fc-af3e-3b2553a3e58a",
+          "type": "ascending"
+        }
+      ]
+    }
+  ],
+  "buckets": [
+    {
+      "name": "cercanias",
+      "type": "bucket",
+      "collectionIds": [
+        "05283064-3755-45bd-a859-6b138dc524e6",
+        "7c30df15-e90b-418c-9a25-a4ead40a67e2",
+        "c764899a-a3ba-4e72-83b7-dee3a5469433",
+        "27ffc533-499c-4ef5-9756-7f0027b99be9"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "indexes": [],
+      "replStrategy": "SimpleStrategy",
+      "addToCqlScript": true,
+      "keyspaceIfNotExist": false,
+      "GUID": "c1baa947-090c-46a9-afb7-4d0413dba8ef",
+      "hackoladeMeta": {},
+      "replFactor": 1
+    }
+  ],
+  "views": [],
+  "relationships": [],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "c1baa947-090c-46a9-afb7-4d0413dba8ef": "cercanias",
+    "05283064-3755-45bd-a859-6b138dc524e6": "paradas_por_linea_dia",
+    "9567526c-8338-4c3d-ac82-7f57cca57fcc": "linea",
+    "c81d6241-20d9-400c-a3ff-b2442d4ebe12": "fecha_servicio",
+    "53919b76-48af-4a4e-acfc-fadc825999c9": "hora_prevista",
+    "b5143c16-2354-40e3-90c8-799e8057f626": "tren",
+    "bd6fef60-2fd5-4f9a-bff2-0e344ad2a88b": "estacion",
+    "a37ecdae-b409-464b-b4a5-ada7bc055d19": "destino",
+    "f631ef5f-2590-472f-bb6d-a7d4820f0b99": "hora_calculada",
+    "16a5652d-217f-4a6a-835f-ddcb473d7747": "origen",
+    "100e2cc8-8289-49e2-8621-66c51b837db0": "retraso_min",
+    "13549876-0a7a-42df-8d0f-4fb7253fd9b8": "sentido",
+    "7c30df15-e90b-418c-9a25-a4ead40a67e2": "recorrido_por_tren_dia",
+    "f262ee2d-7a72-4f5e-8015-0f6ddb6148d3": "tren",
+    "5fe06526-60e9-4e5c-a84f-65f2cc839eeb": "fecha_servicio",
+    "bfbf5124-548d-42ba-9191-65ae18c03236": "hora_prevista",
+    "78cfeeb6-5cd1-469c-8eaf-e05cd6e76f52": "estacion",
+    "a90426b5-1180-4b53-9ec7-727906534f9f": "destino",
+    "2bdf7e2f-52e2-42f1-b18e-1d15173048f2": "hora_calculada",
+    "3e6dc2b0-1141-4216-8076-cff93ef20557": "linea",
+    "02658d59-245c-4304-8a92-09ea2699cb41": "origen",
+    "64d5e0e7-fd30-4906-85aa-84b987f19577": "retraso_min",
+    "4d6d4451-0e4d-4d08-a230-6ff344c6782d": "sentido",
+    "c764899a-a3ba-4e72-83b7-dee3a5469433": "retrasos_por_linea_dia",
+    "b649847c-0cef-4cf4-8e8b-9f5f38f14c45": "linea",
+    "b375ce73-3c44-4547-ab37-c77c2d7b22c7": "fecha_servicio",
+    "7a8bf365-3506-47ad-9ab9-ad22319f2790": "retraso_min",
+    "df9815f6-7801-42f5-a541-039d4f7dc334": "tren",
+    "b8684994-d58c-469d-8af8-9bd72f52731a": "estacion",
+    "352c0bf4-4fa2-4584-b300-98618b53500e": "destino",
+    "d35dc04e-b4e9-40d0-b1c0-d2fb91ff5347": "hora_calculada",
+    "66d97f9d-bd6e-4cc9-be17-79dfde7b1a89": "hora_prevista",
+    "97f82e77-7f54-4c13-afb8-424fe5f1cff4": "origen",
+    "a78b0d2a-8c12-403b-a8e6-b9bb43ed66b0": "sentido",
+    "27ffc533-499c-4ef5-9756-7f0027b99be9": "retrasos_por_estacion",
+    "0c8651d2-8536-4031-9abc-388419e300c1": "estacion",
+    "6ec3638e-7ea2-4dc1-b1ba-f60c79b22e0a": "fecha_servicio",
+    "43b49d3e-6ce1-4c62-a983-6d7131b29de9": "hora_prevista",
+    "70387645-7f95-47fc-af3e-3b2553a3e58a": "tren",
+    "ea360ef5-3d60-4677-af7b-26d78ee89966": "destino",
+    "7fffb5a7-dadc-4862-b2e9-6493977016b7": "hora_calculada",
+    "4e80b85d-5ba1-44ec-82c7-c672b57608b0": "linea",
+    "fa14c17a-952a-4609-8b2b-9af96b38e7bd": "origen",
+    "d799bea5-3522-415b-b6b1-81e90f694c4b": "retraso_min",
+    "191a1fee-3c0e-4401-96a1-dcd024cbb87b": "sentido"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "67c54068-3b19-4ef4-9632-3543e4ec29ff"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "e113d9cb-ea2d-44d0-9db5-e71a19e9a681"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "4f86de3f-8c02-4254-a1ca-da193ad3a83c"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
+  "dbVersion": "5.x",
+  "dbVendor": "Cassandra",
+  "appTarget": "CASSANDRA",
+  "creationTS": "2026-11-13T12:14:32.874Z",
+  "GUID": "8e31248a-0cc9-43a6-8ff1-4d48102ef480",
+  "isLineageEnabled": false,
+  "hackoladeMeta": {
+    "namingConvention": "code",
+    "validationErrors": {
+      "code": true
+    }
+  },
+  "code": "Cercanias_Madrid",
+  "lastModifTS": "2026-11-13T13:37:38.538Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "Cassandra",
+    "pluginVersion": "0.2.23",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.13.8"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "05283064-3755-45bd-a859-6b138dc524e6",
+            "x": 1054.6666666666667,
+            "y": 1388.3333333333333,
+            "width": 265,
+            "height": 213,
+            "color": {}
+          },
+          {
+            "GUID": "7c30df15-e90b-418c-9a25-a4ead40a67e2",
+            "x": 1552.6666666666688,
+            "y": 1375.9999898274727,
+            "width": 268,
+            "height": 213,
+            "color": {}
+          },
+          {
+            "GUID": "c764899a-a3ba-4e72-83b7-dee3a5469433",
+            "x": 1055.9999796549487,
+            "y": 1647.22224934896,
+            "width": 266,
+            "height": 213,
+            "color": {}
+          },
+          {
+            "GUID": "27ffc533-499c-4ef5-9756-7f0027b99be9",
+            "x": 1546.6666666666667,
+            "y": 1649.9999898274727,
+            "width": 264,
+            "height": 212,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 990.6666666666667,
+            "y": 1311.9999898274727,
+            "GUID": "c1baa947-090c-46a9-afb7-4d0413dba8ef"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
