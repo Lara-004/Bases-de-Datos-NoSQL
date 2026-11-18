@@ -1,5 +1,7 @@
 import redis
+import time
 
+# PARTE 1: REDIS LOCAL
 # Conexión a Redis
 operador = redis.Redis(host='localhost', port=6379, username='operador_via', password='pass_operador', decode_responses=True)
 panel = redis.Redis(host='localhost', port=6379, username='panel_estacion', password='pass_panel', decode_responses=True)
@@ -41,3 +43,44 @@ print("Cola C-1 actualizada:", panel.zrange("tramos:C-1", 0, -1, withscores=True
 operador.zrem("tramos:C-1", "Recoletos-Atocha")
 print("\nTramo eliminado: Recoletos-Atocha")
 print("Tramos pendientes en C-1:", panel.zrange("tramos:C-1", 0, -1, withscores=True))
+
+
+# PARTE 2: REDIS CLOUD
+
+cloud = redis.Redis(
+    host='stew-integral-puff-51650.db.redis.io',
+    port=14260,
+    decode_responses=True,
+    username="default",
+    password="9yBlercRofvIy6WUTbRmTlBcmMMYVhrv",
+)
+
+success = cloud.set('foo', 'bar')
+
+result = cloud.get('foo')
+print(result)
+
+# Estado de las estaciones
+cloud.set("estado:Atocha", "abierta")
+cloud.set("estado:Chamartin", "con demoras")
+print("\nEstado de estaciones en Redis Cloud:")
+print("- Atocha:", cloud.get("estado:Atocha"))
+print("- Chamartin:", cloud.get("estado:Chamartin"))
+
+# Top 3 desde el ZSET local a Redis Cloud con caducidad
+top3_c5 = panel.zrange("tramos:C-5", 0, 2, withscores=True)
+for tramo, minutos in top3_c5:
+    cloud.zadd("top3:Atocha", {tramo: minutos})
+
+cloud.expire("top3:Atocha", 10)  # Caduca en 10 segundos
+
+print("\nTop 3 copiado a Cloud:", cloud.zrange("top3:Atocha", 0, -1, withscores=True))
+print(f"TTL inicial: {cloud.ttl('top3:Atocha')} segundos")
+
+time.sleep(4)
+print(f"TTL tras 4 segundos: {cloud.ttl('top3:Atocha')} segundos")
+
+time.sleep(7)
+print('Top 3 tras superar los 10 segundos (caducado):', cloud.zrange('top3:Atocha', 0, -1, withscores=True))
+
+print(f"TTL final de clave expirada: {cloud.ttl('top3:Atocha')}")
